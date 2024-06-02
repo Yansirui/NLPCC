@@ -1,0 +1,152 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{macbert}
+Cui, Y., Che, W., Liu, T., Qin, B., Yang, Z.: Pre-training with whole word
+  masking for chinese bert. IEEE/ACM Transactions on Audio, Speech, and
+  Language Processing  \textbf{29},  3504--3514 (2021).
+  \doi{10.1109/TASLP.2021.3124365}
+
+\bibitem{bert}
+Devlin, J., Chang, M., Lee, K., Toutanova, K.: {BERT:} pre-training of deep
+  bidirectional transformers for language understanding. In: Proceedings of the
+  2019 Conference of the North American Chapter of the Association for
+  Computational Linguistics: Human Language Technologies, {NAACL-HLT} 2019,
+  Minneapolis, MN, USA, June 2-7, 2019, Volume 1 (Long and Short Papers). pp.
+  4171--4186 (2019)
+
+\bibitem{simcse}
+Gao, T., Yao, X., Chen, D.: Simcse: Simple contrastive learning of sentence
+  embeddings. In: Proceedings of the 2021 Conference on Empirical Methods in
+  Natural Language Processing, {EMNLP} 2021, Virtual Event / Punta Cana,
+  Dominican Republic, 7-11 November, 2021. pp. 6894--6910 (2021)
+
+\bibitem{lm5}
+He, P., Liu, X., Gao, J., Chen, W.: Deberta: Decoding-enhanced bert with
+  disentangled attention. arXiv preprint arXiv:2006.03654  (2020)
+
+\bibitem{promptbert}
+Jiang, T., Jiao, J., Huang, S., Zhang, Z., Wang, D., Zhuang, F., Wei, F.,
+  Huang, H., Deng, D., Zhang, Q.: Promptbert: Improving {BERT} sentence
+  embeddings with prompts. In: Proceedings of the 2022 Conference on Empirical
+  Methods in Natural Language Processing, {EMNLP} 2022, Abu Dhabi, United Arab
+  Emirates, December 7-11, 2022. pp. 8826--8837 (2022)
+
+\bibitem{lm1}
+Johnson, R., Zhang, T.: Supervised and semi-supervised text categorization
+  using lstm for region embeddings. In: International Conference on Machine
+  Learning. pp. 526--534. PMLR (2016)
+
+\bibitem{libert}
+Lauscher, A., Vulic, I., Ponti, E.M., Korhonen, A., Glavas, G.: Specializing
+  unsupervised pretraining models for word-level semantic similarity. In:
+  Proceedings of the 28th International Conference on Computational
+  Linguistics, {COLING} 2020, Barcelona, Spain (Online), December 8-13, 2020.
+  pp. 1371--1383 (2020)
+
+\bibitem{sensebert}
+Levine, Y., Lenz, B., Dagan, O., Ram, O., Padnos, D., Sharir, O.,
+  Shalev{-}Shwartz, S., Shashua, A., Shoham, Y.: Sensebert: Driving some sense
+  into {BERT}. In: Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics, {ACL} 2020, Online, July 5-10, 2020. pp.
+  4656--4667 (2020)
+
+\bibitem{sentiprompt}
+Li, C., Gao, F., Bu, J., Xu, L., Chen, X., Gu, Y., Shao, Z., Zheng, Q., Zhang,
+  N., Wang, Y., Yu, Z.: Sentiprompt: Sentiment knowledge enhanced prompt-tuning
+  for aspect-based sentiment analysis. CoRR  (2021)
+
+\bibitem{roberta}
+Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M.,
+  Zettlemoyer, L., Stoyanov, V.: Roberta: A robustly optimized bert pretraining
+  approach. arXiv preprint arXiv:1907.11692  (2019)
+
+\bibitem{gptuse2}
+Liu, Z., Huang, Y., Yu, X., Zhang, L., Wu, Z., Cao, C., Dai, H., Zhao, L., Li,
+  Y., Shu, P., et~al.: Deid-gpt: Zero-shot medical text de-identification by
+  gpt-4. arXiv preprint arXiv:2303.11032  (2023)
+
+\bibitem{let}
+Lyu, B., Chen, L., Zhu, S., Yu, K.: {LET:} linguistic knowledge enhanced graph
+  transformer for chinese short text matching. In: Thirty-Fifth {AAAI}
+  Conference on Artificial Intelligence, {AAAI} 2021, Thirty-Third Conference
+  on Innovative Applications of Artificial Intelligence, {IAAI} 2021, The
+  Eleventh Symposium on Educational Advances in Artificial Intelligence, {EAAI}
+  2021, Virtual Event, February 2-9, 2021. pp. 13498--13506 (2021)
+
+\bibitem{gptuse1}
+Nov, O., Singh, N., Mann, D.M.: Putting chatgpt’s medical advice to the
+  (turing) test. medrxiv. Preprint posted online January  \textbf{24} (2023)
+
+\bibitem{gptuse5}
+Peng, K., Ding, L., Zhong, Q., Shen, L., Liu, X., Zhang, M., Ouyang, Y., Tao,
+  D.: Towards making the most of chatgpt for machine translation. arXiv
+  preprint arXiv:2303.13780  (2023)
+
+\bibitem{gptuse4}
+Qin, C., Zhang, A., Zhang, Z., Chen, J., Yasunaga, M., Yang, D.: Is chatgpt a
+  general-purpose natural language processing task solver? arXiv preprint
+  arXiv:2302.06476  (2023)
+
+\bibitem{gpt}
+Radford, A., Narasimhan, K., Salimans, T., Sutskever, I., et~al.: Improving
+  language understanding by generative pre-training  (2018)
+
+\bibitem{t5}
+Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., Zhou,
+  Y., Li, W., Liu, P.J.: Exploring the limits of transfer learning with a
+  unified text-to-text transformer. Journal of machine learning research
+  \textbf{21}(140),  1--67 (2020)
+
+\bibitem{lm6}
+Sanh, V., Debut, L., Chaumond, J., Wolf, T.: Distilbert, a distilled version of
+  bert: smaller, faster, cheaper and lighter. arXiv preprint arXiv:1910.01108
+  (2019)
+
+\bibitem{gptuse3}
+Shen, Y., Song, K., Tan, X., Li, D., Lu, W., Zhuang, Y.: Hugginggpt: Solving ai
+  tasks with chatgpt and its friends in hugging face. Advances in Neural
+  Information Processing Systems  \textbf{36} (2024)
+
+\bibitem{lm2}
+Tai, K.S., Socher, R., Manning, C.D.: Improved semantic representations from
+  tree-structured long short-term memory networks. arXiv preprint
+  arXiv:1503.00075  (2015)
+
+\bibitem{skep}
+Tian, H., Gao, C., Xiao, X., Liu, H., He, B., Wu, H., Wang, H., Wu, F.: {SKEP:}
+  sentiment knowledge enhanced pre-training for sentiment analysis. In:
+  Proceedings of the 58th Annual Meeting of the Association for Computational
+  Linguistics, {ACL} 2020, Online, July 5-10, 2020. pp. 4067--4076 (2020)
+
+\bibitem{lm4}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N.,
+  Kaiser, {\L}., Polosukhin, I.: Attention is all you need. Advances in neural
+  information processing systems  \textbf{30} (2017)
+
+\bibitem{esimcse}
+Wu, X., Gao, C., Zang, L., Han, J., Wang, Z., Hu, S.: Esimcse: Enhanced sample
+  building method for contrastive learning of unsupervised sentence embedding.
+  In: Proceedings of the 29th International Conference on Computational
+  Linguistics, {COLING} 2022, Gyeongju, Republic of Korea, October 12-17, 2022.
+  pp. 3898--3907 (2022)
+
+\bibitem{bge}
+Xiao, S., Liu, Z., Zhang, P., Muennighof, N.: C-pack: Packaged resources to
+  advance general chinese embedding. CoRR  (2023)
+
+\bibitem{kear}
+Xu, Y., Zhu, C., Wang, S., Sun, S., Cheng, H., Liu, X., Gao, J., He, P., Zeng,
+  M., Huang, X.: Human parity on commonsenseqa: Augmenting self-attention with
+  external attention. In: Proceedings of the Thirty-First International Joint
+  Conference on Artificial Intelligence, {IJCAI} 2022, Vienna, Austria, 23-29
+  July 2022. pp. 2762--2768 (2022)
+
+\bibitem{lm3}
+Zhu, X., Sobihani, P., Guo, H.: Long short-term memory over recursive
+  structures. In: International conference on machine learning. pp. 1604--1612.
+  PMLR (2015)
+
+\end{thebibliography}

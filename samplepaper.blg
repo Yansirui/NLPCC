@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: samplepaper.aux
+The style file: splncs04.bst
+Database file #1: refs.bib
+Warning--empty journal in gpt
+You've used 26 entries,
+            2850 wiz_defined-function locations,
+            727 strings with 11054 characters,
+and the built_in function-call counts, 17773 in all, are:
+= -- 1391
+> -- 857
+< -- 18
++ -- 348
+- -- 322
+* -- 1191
+:= -- 2366
+add.period$ -- 39
+call.type$ -- 26
+change.case$ -- 259
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 1460
+empty$ -- 1388
+format.name$ -- 348
+if$ -- 3755
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 335
+newline$ -- 84
+num.names$ -- 52
+pop$ -- 691
+preamble$ -- 1
+purify$ -- 211
+quote$ -- 0
+skip$ -- 417
+stack$ -- 0
+substring$ -- 833
+swap$ -- 804
+text.length$ -- 18
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 104
+warning$ -- 1
+while$ -- 116
+width$ -- 28
+write$ -- 257
+(There was 1 warning)

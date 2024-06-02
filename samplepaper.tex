@@ -1,0 +1,71 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+%
+\begin{document}
+%
+\title{W2CL:A Multi-Task Learning Approach to Improve Domain-Specific Text Classification through Word Classification and Contrastive Learning}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{A\inst{1}\orcidID{0000-1111-2222-3333} \and
+B\inst{2,3}\orcidID{1111-2222-3333-4444} \and
+C\inst{3}\orcidID{2222--3333-4444-5555}}
+%
+\authorrunning{S. Yan et al.}
+\titlerunning{W2CL for Domain Text Classification}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Zhejiang Sci-Tech University, Hangzhou, Zhejiang, China\\
+\email{email1}\\
+\email{\{abc,lncs\}@uni-heidelberg.de}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Text classification task plays a crucial role in various NLP tasks. Recent studies have shown that contrastive learning can enhance the representational capability of Pre-trained Language Models(PLMs) and that different methods for constructing positive and negative samples can be applied to various downstream application scenarios. Therefore, in this study, we propose \textbf{W2CL}, a novel multi-task learning framework based on \textbf{W}ord \textbf{C}lassification and \textbf{C}ontrastive \textbf{L}earning, aimed at improving the performance of PLMs in domain-specific text classification task.Contrastive learning assists the model in gradually learning the semantic similarity and contextual relevance between words during the training process to enhance its ability to understand text. Word classification provides additional contextual understanding, thereby improving the model's ability to differentiate between different classes within the specific domain. Experiments demonstrate that our multi-task approach significantly outperforms other methods, leading to substantial improvements in domain-specific text classification performance. This framework offers a robust solution for adapting general-purpose language models to specialized domains, ensuring higher accuracy and better generalization in various practical applications.
+
+\keywords{Text Classification  \and Contrastive Learning \and Multi-task Learning.}
+\end{abstract}
+%
+%
+%
+\input{introduction}
+\input{method}
+\input{experiments}
+\input{analysis}
+\input{conclusion}
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+\bibliographystyle{splncs04}
+\bibliography{refs}
+
+\end{document}
