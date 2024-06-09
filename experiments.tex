@@ -1,34 +1,34 @@
 \section{Experiments}
 \label{sec:exp}
-In this chapter, we validate the proposed W2CL method on text classification tasks across four domains. Additionally, we demonstrate the effectiveness of this method in domain transfer tasks.
+In this chapter, we validate the proposed W2CL method on sentence classification tasks across four domains. Additionally, we demonstrate the effectiveness of this method in domain transfer tasks.
 \subsection{Dataset and Experiment Details}
-We evaluated the proposed multi-task learning method on four text classification datasets, covering the domains of automotive, legal, finance, and healthcare. For the transfer learning tasks, we assessed the method on four text retrieval datasets from the same domains. Below, we provide a brief introduction to these datasets.
+We evaluated the proposed multi-task learning method on four sentence classification datasets, covering the domains of automotive, legal, finance, and medicine. For the transfer learning tasks, we assessed the method on four text retrieval datasets from the same domains. For the sentence classification task datasets, the automotive and financial domains are the datasets we contributed, while the legal and medical domains use public datasets. The text retrieval task datasets are all contributed by us. Below, we provide a brief introduction to these datasets.
 
-\subsubsection{Text Classification Dataset.} The evaluation sets for text classification task consist of four datasets: Automatic Text Classification Corpora (ATCC), CAIL, CHIP-CTC, and Finance Text Classification Corpora (FTCC). ATCC pertains to the automotive domain and includes 6174 training instances and 1000 test instances, with coverage of 10 categories. CAIL is related to the legal domain and comprises 154592 training instances and 49639 test instances, encompassing 134 categories. CHIP-CTC pertains to the medical domain, with 24516 training instances and 6128 test instances, covering 44 categories. FTCC is a finance-related dataset, consisting of 103468 training instances and 3332 test instances, and spans 14 categories.
+\subsubsection{Sentence Classification Dataset.} The evaluation sets for sentence classification task consist of four datasets: Automatic Sentence Classification Corpora (ASCC), CAIL~\cite{cail}, CHIP-CTC~\cite{chip}, and Finance Sentence Classification Corpora (FSCC). ASCC pertains to the automotive domain and includes 6174 training instances and 1000 test instances, with coverage of 10 categories. CAIL is related to the legal domain and comprises 154592 training instances and 49639 test instances, encompassing 134 categories. CHIP-CTC pertains to the medical domain, with 24516 training instances and 6128 test instances, covering 44 categories. FSCC is a finance-related dataset, consisting of 10346 training instances and 3332 test instances, and spans 14 categories.
 
-\subsubsection{Text Retriveal Dataset.} The text retrieval datasets comprise four collections: Automatic Text Retrieval Corpora (ATRC), Legal Text Retrieval Corpora (LTRC), Medical Text Retrieval Corpora (MTRC), and Finance Text Retrieval Corpora (FTRC). These datasets correspond to the automotive, legal, medical, and financial domains, respectively. Each dataset contains 1000, 232, 3520, and 1953 retrieval test texts, with a retrieval text space of 7175, 5232, 15000, and 12000 texts accordingly.
+\subsubsection{Text Retrieval Dataset.} The text retrieval datasets comprise four collections: Automatic Text Retrieval Corpora (ATRC), Legal Text Retrieval Corpora (LTRC), Medical Text Retrieval Corpora (MTRC), and Finance Text Retrieval Corpora (FTRC). These datasets correspond to the automotive, legal, medical, and financial domains, respectively. Each dataset contains 1000, 232, 3520, and 1953 retrieval test texts, with a retrieval text space of 7175, 5232, 15000, and 12000 texts accordingly.
 
-\subsubsection{Experiment Details.} Our model begins with the checkpoint of BERT/RoBERTa model, and we utilize the [CLS] token representation as the sentence representation.During training, we employe an Adam optimizer with a batch size of 16. The learning rate for the sentence representation model is set to 5e-5.During the fine-tuning stage, we modified the learning rate to 3e-5 based on the training hyperparameters. Additionally, we set the seed to 0, 1, and 2, respectively, and calculated the average experimental data metrics for these three scenarios.
+\subsubsection{Experiment Details.} Our model begins with the checkpoint of BERT/RoBERTa model, and we utilize the [CLS] token representation as the sentence representation. During training, we employe an Adam optimizer with a batch size of 16. The learning rate for the sentence representation model is set to 5e-5. During the fine-tuning stage, we modified the learning rate to 3e-5 based on the training hyperparameters. Additionally, we set the seed to 0, 1, and 2, respectively, and calculated the average experimental data metrics for these three scenarios.
 
 \subsection{BASELINES}
-We validated the effectiveness of our proposed method by comparing it against three baseline approaches: Whole Word Masking(WWM), SimCSE, and SSCL, using BERT and RoBERTa as basic models.
+We validated the effectiveness of our proposed method by comparing it against three baseline approaches: Whole Word Masking(WWM), SimCSE, and SSCL\cite{sscl}, using BERT and RoBERTa as basic models.
 
-\subsubsection{WWM.} WWM modifies the random masking task by changing the masking unit from token to whole word, leveraging contextual information to predict the masked word. For instance, in WWM, both "play" and "\#ing" would be masked together when masking "play" and "\#ing." We selected WWM as a baseline method instead of random masking because, for domain-specific tasks, domain-specific term tends to contain more domain-relevant information.
+\subsubsection{WWM.} WWM modifies the random masking task by changing the masking unit from token to whole word, leveraging contextual information to predict the masked word. For instance, in WWM, both "play" and "\#ing" would be masked together. We selected WWM as a baseline method instead of random masking because, for domain-specific tasks, domain-specific word tends to contain more domain-relevant information.
 
 \subsubsection{SimCSE.} SimCSE constructs positive samples based on the randomness of dropout and uses in-batch sampling to create negative samples. The model is trained by generating a loss value through the contrast between the original samples and the positive and negative samples.
 
 \subsubsection{SSCL.} SSCL enhances the construction of negative samples by leveraging the principles of SimCSE. Specifically, SSCL employs hidden representations from intermediate layers of PLMs as negative samples. The objective is to ensure that the final sentence representations are distinctly separated from these intermediate representations.
 
 \subsection{Experiment Results}
-In this chapter, we will present the experimental results for the text classification and retrieval tasks. F1 score and Mean Reciprocal Rank(MRR) are used as evaluation metrics for these two tasks, respectively. 
-\subsubsection{Text Classification Task.}Table~\ref{cls_tab} presents the performance of various methods on the text classification task, with F1 score as the evaluation metric. From the experimental results, it can be observed that the proposed W2CL method outperforms other methods. Compared to the WWM method, W2CL incorporates contrastive learning task and word classification task on top of WWM. In comparison to SimCSE and SSCL methods, W2CL modifies the construction of positive and negative samples for contrastive learning and introduces word classification task. Based on the experimental results, the following conclusions can be drawn: 1) Domain knowledge constructed based on ChatGPT is effective; 2) The proposed W2CL method effectively integrates domain knowledge into the model; 3) The proposed W2CL method outperforms other methods across different baseline models and domains. This indicates that W2CL can serve as a universal method, adaptable to any model as the basic model and transferable across various domains.
+In this chapter, we will present the experimental results for the sentence classification and retrieval tasks. F1 score and Mean Reciprocal Rank(MRR) are used as evaluation metrics for these two tasks, respectively. 
+\subsubsection{Sentence Classification Task.}Table~\ref{f1_tab} presents the performance of various methods on the sentence classification task, with F1 score as the evaluation metric. From the experimental results, it can be observed that the proposed W2CL method outperforms other methods. Compared to the WWM method, W2CL incorporates contrastive learning task and word classification task on top of WWM. In comparison to SimCSE and SSCL methods, W2CL modifies the construction of positive and negative samples for contrastive learning and introduces word classification task. Based on the experimental results, the following conclusions can be drawn: 1) Domain knowledge constructed based on ChatGPT is effective; 2) The proposed W2CL method effectively integrates domain knowledge into the model; 3) The proposed W2CL method outperforms other methods across different baseline models and domains. This indicates that W2CL can serve as a universal method, adaptable to any model as the basic model and transferable across various domains.
 
 \begin{table}
-	\caption{ Evaluation performance on the text classification tasks.The evaluation metric is F1 score(\%).}\label{cls_tab}
+	\caption{ Evaluation performance on the sentence classification tasks. The evaluation metric is F1 score(\%).}\label{f1_tab}
 	\begin{center}
 	\begin{tabular}{lcccll}
 		\bottomrule
-		Model          & ATCC  & CAIL  & CHIP-CTC & \multicolumn{1}{c}{FTCC} & \multicolumn{1}{c}{Avg.} \\ \hline
+		Model          & ASCC  & CAIL  & CHIP-CTC & \multicolumn{1}{c}{FSCC} & \multicolumn{1}{c}{Avg.} \\ \hline
 		\multicolumn{6}{c}{\textit{BERT Version}}                                                                \\ \hline
 		BERT           & ~~~92.48~~~ & ~~~65.58~~~ & ~~~82.91~~~    & ~~~85.82~~~                    &         ~~~81.70~~~                 \\ \hline
 		WWM-BERT       & ~~~94.08~~~ & ~~~66.62~~~ & ~~~83.52~~~    & ~~~85.91~~~                    &         ~~~82.53~~~               \\ \hline
@@ -36,7 +36,7 @@ In this chapter, we will present the experimental results for the text classific
 		SSCL-BERT      & ~~~93.76~~~ & ~~~66.43~~~ & ~~~83.56~~~    & ~~~85.67~~~                    &         ~~~82.36~~~                 \\ \hline
 		W2CL-BERT(Ours)       & ~~~\textbf{94.93}~~~ & ~~~\textbf{66.83}~~~ & ~~~\textbf{84.06}~~~    & ~~~\textbf{86.08}~~~                    &             ~~~\textbf{82.98}~~~             \\ \hline
 		\multicolumn{6}{c}{\textit{RoBERTa Version}}                                                             \\ \hline
-		RoBERTa        & ~~~93.93~~~ & ~~~67.38~~~ & ~~~83.91~~~    & ~~~86.1~~~                     &        ~~~82.83~~~                  \\ \hline
+		RoBERTa        & ~~~93.93~~~ & ~~~67.38~~~ & ~~~83.91~~~    & ~~~86.10~~~                     &        ~~~82.83~~~                  \\ \hline
 		WWM-RoBERTa    & ~~~94.26~~~ & ~~~67.46~~~ & ~~~83.59~~~    & ~~~86.11~~~                    &       ~~~82.86~~~                  \\ \hline
 		SimCSE-RoBERTa & ~~~94.14~~~ & ~~~67.43~~~ & ~~~83.92~~~    & ~~~85.83~~~                    &        ~~~82.83~~~                  \\ \hline
 		SSCL-RoBERTa   & ~~~94.41~~~ & ~~~67.18~~~ & ~~~83.56~~~    & ~~~86.27~~~                    &        ~~~82.86~~~                  \\ \hline
@@ -46,12 +46,12 @@ In this chapter, we will present the experimental results for the text classific
 \end{table}
 
 
-\subsubsection{Transfer Task.}In this section, we evaluate the generalization ability of the proposed W2CL method on text retrieval tasks across four domains. In this task, the goal is to find text similar to the current sentence from a set of sentencess. For this task, we directly utilize the representation vector of the [CLS] token, without the need for fine-tuning.
+\subsubsection{Transfer Task.}In this section, we evaluate the generalization ability of the proposed W2CL method on text retrieval tasks across four domains. The objective of this task is to rank the candidate retrieval texts based on their similarity to the given retrieval text. For this task, we directly utilize the representation vector of the [CLS] token, without the need for fine-tuning.
 
-The experimental results are shown in Table~\ref{mrr_tab}. From the table, it can be observed that the proposed W2CL method achieves superior MRR scores on most datasets. This result indicates that the W2CL method exhibits better generalization ability compared to other methods in the study.
+The experimental results are shown in Table~\ref{mrr_tab}. From the table, it can be observed that the proposed W2CL method achieves superior MRR scores on most datasets. This result indicates that the W2CL method exhibits better generalization ability compared to other methods in the study. When using RoBERTa as the basic model, the average MRR of WWM and SimCSE is lower than that of RoBERTa. As shown in the table, this is mainly because the MRR of WWM and SimCSE is lower than RoBERTa on the automotive domain dataset, leading to a lower average MRR. Since there is no fine-tuning phase in this task, we guess that this is primarily due to the randomness of the dataset and pre-training.
 
 \begin{table}[]
-	\caption{ Evaluation performance on the text retriveal tasks.The evaluation metric is MRR score(\%).}\label{mrr_tab}
+	\caption{ Evaluation performance on the text retrieval tasks. The evaluation metric is MRR score(\%).}\label{mrr_tab}
 	\begin{center}
 	\begin{tabular}{lcccll}
 		\bottomrule

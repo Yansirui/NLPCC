@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  2 JUN 2024 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.13)  8 JUN 2024 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,27 +298,23 @@ pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count305
 \l__pdf_internal_box=\box100
-) (./samplepaper.aux
-
-LaTeX Warning: Label `cls_tab' multiply defined.
-
-)
+) (./samplepaper.aux)
 \openout1 = `samplepaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf
 .mkii
@@ -346,59 +342,41 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
 
 
 (d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
 
 
 (d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-7.
-
-(d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-Overfull \hbox (5.68448pt too wide) in paragraph at lines 52--53
-\T1/cmr/bx/n/9 Keywords:\T1/cmr/m/n/9 Text Clas-si-fi-ca-tion \TS1/cmr/m/n/9 · 
-\T1/cmr/m/n/9 Con-trastive Learn-ing \TS1/cmr/m/n/9 · \T1/cmr/m/n/9 Multi-task 
-Learn-
- []
-
-(./introduction.tex
-Overfull \hbox (6.95667pt too wide) in paragraph at lines 3--4
-\T1/cmr/m/n/10 rep-re-sen-ta-tion learn-ing meth-ods, es-pe-cially PLMs such as
- BERT[2], RoBERTa[10],
- []
-
-[1
+(./introduction.tex [1
 
 {d:/BaiduNetdiskDownload/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.
 map}{d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/c
 m-super-t1.enc}{d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/enc/dvips
 /cm-super/cm-super-ts1.enc}]
-Underfull \vbox (badness 2158) has occurred while \output is active []
+Underfull \vbox (badness 5105) has occurred while \output is active []
 
  [2])
 (./method.tex [3]
-<ChatGPT.jpg, id=23, 963.6pt x 542.025pt>
+<ChatGPT.jpg, id=19, 963.6pt x 542.025pt>
 File: ChatGPT.jpg Graphic file (type jpg)
 <use ChatGPT.jpg>
 Package pdftex.def Info: ChatGPT.jpg  used on input line 15.
 (pdftex.def)             Requested size: 347.12354pt x 195.2529pt.
  [4 <./ChatGPT.jpg>]
-<train_framework.jpg, id=29, 963.6pt x 542.025pt>
+<train_framework.jpg, id=31, 963.6pt x 542.025pt>
 File: train_framework.jpg Graphic file (type jpg)
 <use train_framework.jpg>
-Package pdftex.def Info: train_framework.jpg  used on input line 56.
+Package pdftex.def Info: train_framework.jpg  used on input line 55.
 (pdftex.def)             Requested size: 347.12354pt x 195.2529pt.
 
-Overfull \hbox (20.2027pt too wide) in paragraph at lines 61--62
+Overfull \hbox (20.2027pt too wide) in paragraph at lines 60--61
 []\T1/cmr/m/n/10 The train-ing frame-work is de-picted in Fig-ure 2[]. Firstly,
  we ob-tain the loss($\OML/cmm/m/it/10 L[]$\T1/cmr/m/n/10 )
  []
@@ -409,52 +387,54 @@ Overfull \hbox (7.8814pt too wide) in paragraph at lines 11--12
 h the check-point of BERT/RoBERTa
  []
 
+
+Overfull \hbox (0.26385pt too wide) in paragraph at lines 14--15
+\T1/cmr/m/n/10 three base-line ap-proaches: Whole Word Mask-ing(WWM), Sim-CSE, 
+and SSCL[1],
+ []
+
 [7] [8]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 53.
 
 ) (./analysis.tex) (./conclusion.tex) (./samplepaper.bbl [9] [10] [11])
-[12] (./samplepaper.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[12] (./samplepaper.aux) ) 
 Here is how much of TeX's memory you used:
- 3547 strings out of 476025
- 51992 string characters out of 5783536
+ 3531 strings out of 476025
+ 51362 string characters out of 5783536
  1874382 words of memory out of 5000000
- 23937 multiletter control sequences out of 15000+600000
- 526900 words of font info for 69 fonts, out of 8000000 for 9000
+ 23925 multiletter control sequences out of 15000+600000
+ 526587 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,62p,1694b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx10.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx7.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><d:/BaiduNetdiskDownload/texlive/2023/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/BaiduNetdiskDownload/texli
-ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/BaiduNetdiskDow
-nload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Baid
-uNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy5.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/BaiduNetdiskDownload/texlive
-/2023/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><d:/BaiduNetdiskDownl
-oad/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/BaiduN
-etdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
-><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
-fbx1440.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public
-/cm-super/sfrm0500.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/t
-ype1/public/cm-super/sfrm0900.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/BaiduNetdiskDownload/texlive/2
-023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><d:/BaiduNetdiskDownloa
-d/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on samplepaper.pdf (12 pages, 3532645 bytes).
+ 57i,9n,62p,1683b,337s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><d:/BaiduNetdiskDownload/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><d:/BaiduNetdiskDownload/texli
+ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/BaiduNetdiskDo
+wnload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Ba
+iduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb><d:/BaiduNetdiskDownload/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/BaiduNetdiskDownload/texli
+ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/BaiduNetdiskDow
+nload/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Baid
+uNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx0900.p
+fb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/cm-super
+/sfbx1000.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx1200.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf-dist/fonts
+/type1/public/cm-super/sfbx1440.pfb><d:/BaiduNetdiskDownload/texlive/2023/texmf
+-dist/fonts/type1/public/cm-super/sfrm0500.pfb><d:/BaiduNetdiskDownload/texlive
+/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><d:/BaiduNetdiskDownl
+oad/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/BaiduN
+etdiskDownload/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb
+>
+Output written on samplepaper.pdf (12 pages, 3515192 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

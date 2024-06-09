@@ -2,9 +2,9 @@
 \label{sec:method}
 This section introduces the detailed methodology of the our proposed W2CL framework, which mainly consists of two parts: domain knowledge extraction with ChatGPT and knowledge integration based on multi-task learning.
 \subsection{Domain Knowledge Extraction with ChatGPT}
-In the domain knowledge acquisition phase, we use ChatGPT as a knowledge extractor to extract the necessary domain knowledge for multi-task learning from a raw text corpus. This step can be divided into three stages, as shown in Figure~\ref{ke}.
+In the domain knowledge acquisition phase, we use ChatGPT as a knowledge extractor to extract the necessary domain knowledge for multi-task learning from raw text corporas which can be easily obtained from online resources like Baidu Zhidao. This step can be divided into three stages, as shown in Figure~\ref{ke}.
 
-In Step 1, we first use the Jieba tool to segment the raw text corpus and then compile a list of frequently occurring words. ChatGPT is then employed to filter out domain-specific vocabulary from this list, as illustrated in Figure~\ref{ke}.a, and the prompt1 shown in the Figure~\ref{ke}, "I currently have several terms. You will categorize all the terms I provide into levels of relevance: high, medium, and low. This relevance level pertains to a specific domain." Finally, extract the terms with high relevance to compile the final domain-specific vocabulary list.
+In Step 1, we first use the Jieba tool to segment the raw text corpus and then compile a list of frequently occurring words. ChatGPT is then employed to filter out domain-specific vocabulary from this list, as illustrated in Figure~\ref{ke}.a, and the prompt1 shown in the Figure~\ref{ke} is "I currently have several terms. You will categorize all the terms I provide into levels of relevance: high, medium, and low. This relevance level pertains to the XX domain". Finally, extract the terms with high relevance to compile the final domain-specific vocabulary list.
 
 In Step 2, ChatGPT is used to categorize the domain-specific vocabulary obtained in Step 1 into relevant categories within the domain, and the prompt2 is "Assume you are now an expert in the XX domain. Please classify the terms I provide within the subcategories of this domain.". This step allows us to obtain the initial version of domain-specific classification knowledge.
 
@@ -13,13 +13,13 @@ In Step 3, we manually consolidate all categories obtained in Step 2 to create a
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{ChatGPT} 
-	\caption{Knowledge Extraciton Framework}
+	\caption{Knowledge Extraction Framework}
 	\label{ke}
 \end{figure}
-\subsection{Domain Knowledge Intergration}
-Our proposed knowledge intergration method is based on Whole Word Masking(WWM)\cite{macbert} and incorporates two additional training tasks: Word Classification and Contrastive Learning. The details about WWM will be introduced in the BASELINES section of Chapter 3. The following sections will introduce other two tasks individually.
+\subsection{Domain Knowledge Integration}
+Our proposed knowledge integration method is based on Whole Word Masking(WWM)\cite{macbert} and incorporates two additional training tasks: Word Classification and Contrastive Learning. The details about WWM will be introduced in the BASELINES section of Chapter 3. The following sections will introduce other two tasks individually.
 \subsubsection{Word Classification.}
-Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5}, [MASK],$x${\tiny 7}\} and a list of categories for the masked words \{$C${\tiny 1}, $C${\tiny 2}\}. Word Classification adds a classification layer to the original model architecture. The classification loss function is then computed as shown in Equation~\ref{tc}:
+Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5}, [MASK],$x${\tiny 7}\} where \($x$_i\) means one word which may cover several tokens and a list of categories for the masked words \{$C${\tiny 1}, $C${\tiny 2}\}. Word Classification adds a classification layer to the original model architecture. The classification loss function is then computed as shown in Equation~\ref{tc}:
 \begin{equation}
 	\label{tc}
 	L(\mathbf{y}, \mathbf{\hat{y}}) = - \sum_{i=1}^C \left( y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i) \right)
@@ -28,10 +28,9 @@ Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5
 	\item $\mathbf{y} = [y_1, y_2, \ldots, y_C]$: The multi-label binary vector of true labels, where $C$ is the number of classes. Each $y_i$ represents the true label for class $i$ ($1$ indicates the presence of the class, $0$ indicates the absence of the class).
 	\item $\mathbf{\hat{y}} = [\hat{y}_1, \hat{y}_2, \ldots, \hat{y}_C]$: The predicted probability distribution vector from the model, where each $\hat{y}_i$ represents the predicted probability for class $i$, with values in the range $[0, 1]$.
 	\item $L(\mathbf{y}, \mathbf{\hat{y}})$: The loss function value for the multi-label classification task.
-	\item $C$: The total number of classes.
 \end{itemize}
 \subsubsection{Contrastive Learning.}
-Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5}, [MASK],$x${\tiny 7}\}, and the actual words masked by [MASK] \{$x${\tiny 4}, $x${\tiny 6}\}.Our proposed contrastive learning method uses the actual word corresponding to the current [MASK] position as the positive sample for the current [MASK]. All the positive and negative samples of other [MASK] tokens from other sentences in the same batch are used as the negative samples for the current [MASK]. The specific calculation method is shown in Equation~\ref{cl}:
+Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5}, [MASK],$x${\tiny 7}\} where \($x$_i\) means one word which may cover several tokens, and the actual words masked by [MASK] \{$x${\tiny 4}, $x${\tiny 6}\}. Our proposed contrastive learning method uses the actual word corresponding to the current [MASK] position as the positive sample for the current [MASK]. All the positive samples of other [MASK] tokens from other sentences in the same batch are used as the negative samples for the current [MASK]. The specific calculation method is shown in Equation~\ref{cl}:
 \begin{equation}
 	\label{cl}
 	L(\mathbf{t}, \mathbf{t'}) = -\frac{1}{N} \sum_{i=1}^{N} \log \frac{e^{sim(f(\mathbf{t}_i) \cdot f(\mathbf{t'}_i))/\tau}}{\sum_{j=1}^{N} e^{sim(f(\mathbf{t}_i) \cdot f(\mathbf{t'}_j))/\tau}}
@@ -44,12 +43,12 @@ Given a sentence \{$x${\tiny 1}, $x${\tiny 2}, $x${\tiny 3}, [MASK], $x${\tiny 5
 	\item \(\tau\): is a temperature hyperparameter, with a default value of 0.01.
 \end{itemize}
 \subsubsection{Training Framework.}
-The overall training objective comprises three terms:
+The overall training objective comprises three parts:
 \begin{equation}
 	\label{allloss}
 	L_{overall} = L_{WWM} + L_{WC} + L_{CL} 
 \end{equation}
-where \(L_{WWM}\) is the loss of the WWM task,\(L_{WC}\) is calculated by equation~\ref{tc},and \(L_{CL}\) is calculated by equation~\ref{cl}.
+where \(L_{WWM}\) is the loss of the WWM task, \(L_{WC}\) is calculated by equation~\ref{tc}, and \(L_{CL}\) is calculated by equation~\ref{cl}.
 
 \begin{figure}[ht]
 	\centering

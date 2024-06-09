@@ -1,39 +1,39 @@
 \section{Analysis}
 \label{sec:anl}
 \subsection{Ablation Study}
-To evaluate the effectiveness of the two modules in the proposed method—the contrastive learning module and the word classification module, we conducted an ablation study. The experimental results are shown in Table~\ref{cls_tab}.From the experimental results, it can be seen that removing the contrastive learning module leads to an average F1 score decrease of 0.37\%, and removing the word classification module results in an average F1 score decrease of 0.34\%. These findings indicate that the removal of either module results in a decline in the model's performance.
+To evaluate the effectiveness of the two modules in the proposed method—the contrastive learning module and the word classification module, we conducted an ablation study. The experimental results are shown in Table~\ref{cls_tab}. From the experimental results, it can be seen that removing the contrastive learning module leads to an average F1 score decrease of 0.37\%, and removing the word classification module results in an average F1 score decrease of 0.34\%. These findings indicate that the removal of either module results in a decline in the model's performance.
 
 \begin{table}
-	\caption{ Ablation study for several methods evaluated on the text classification tasks.The evaluation metric is F1 score(\%).CL: Contrastive Learning Module.TC: Term Classification Module.}\label{cls_tab}
+	\caption{ Ablation study for several methods evaluated on the sentence classification tasks. The evaluation metric is F1 score(\%). CL: Contrastive Learning Module. WC: Word Classification Module.}\label{cls_tab}
 	\begin{center}
 	\begin{tabular}{lccclc}
 		\bottomrule
-		Model      & ATCC         & CAIL         & CHIP-CTC     & \multicolumn{1}{c}{FTCC} & Avg.                      \\ \hline
+		Model      & ASCC         & CAIL         & CHIP-CTC     & \multicolumn{1}{c}{FSCC} & Avg.                      \\ \hline
 		W2CL-BERT   & ~~~94.93~~~        & ~~~66.83~~~        & ~~~84.06~~~        & ~~~86.08~~~                    & ~~~82.98~~~ \\ \hline
 		\multicolumn{1}{c}{w/o CL}     & 94.55(\textcolor{red}{-0.38}) & 66.53(\textcolor{red}{-0.30}) & 83.25(\textcolor{red}{-0.81}) & 85.96(\textcolor{red}{-0.12})             & 82.57(\textcolor{red}{-0.41})              \\ \hline
-		\multicolumn{1}{c}{w/o TC}     & 94.39(\textcolor{red}{-0.54}) & 66.76(\textcolor{red}{-0.07}) & 83.28(\textcolor{red}{-0.78}) & 85.87(\textcolor{red}{-0.21})             & 82.58(\textcolor{red}{-0.40})              \\ \hline
+		\multicolumn{1}{c}{w/o WC}     & 94.39(\textcolor{red}{-0.54}) & 66.76(\textcolor{red}{-0.07}) & 83.28(\textcolor{red}{-0.78}) & 85.87(\textcolor{red}{-0.21})             & 82.58(\textcolor{red}{-0.40})              \\ \hline
 		W2CL-RoBERTa & ~~~94.84~~~        & ~~~67.71~~~        & ~~~83.98~~~        & ~~~86.53~~~                    & ~~~83.27~~~ \\ \hline
-		\multicolumn{1}{c}{w/o CL}     & 94.7(\textcolor{red}{-0.14})  & 67.33(\textcolor{red}{-0.38}) & 83.35(\textcolor{red}{-0.63}) & 86.38(\textcolor{red}{-0.15})             & 82.94(\textcolor{red}{-0.33})              \\ \hline
-		\multicolumn{1}{c}{w/o TC}     & 94.55(\textcolor{red}{-0.29}) & 67.56(\textcolor{red}{-0.15}) & 83.48(\textcolor{red}{-0.50}) & 86.39(\textcolor{red}{-0.14})             & 83.00(\textcolor{red}{-0.27})              \\ \bottomrule
+		\multicolumn{1}{c}{w/o CL}     & 94.70(\textcolor{red}{-0.14})  & 67.33(\textcolor{red}{-0.38}) & 83.35(\textcolor{red}{-0.63}) & 86.38(\textcolor{red}{-0.15})             & 82.94(\textcolor{red}{-0.33})              \\ \hline
+		\multicolumn{1}{c}{w/o WC}     & 94.55(\textcolor{red}{-0.29}) & 67.56(\textcolor{red}{-0.15}) & 83.48(\textcolor{red}{-0.50}) & 86.39(\textcolor{red}{-0.14})             & 83.00(\textcolor{red}{-0.27})              \\ \bottomrule
 	\end{tabular}
 	\end{center}
 \end{table}
 
 \subsection{Influence of Batch Size}
-During the training phase, the impact of batch size on the model's final performance is illustrated in Table~\ref{bs_tab}. As shown in the table, the model performs best when the batch size is set to 16. For the proposed W2CL method, a larger batch size not only increases the sample diversity within each batch during training but also provides more negative samples for contrastive learning. Additionally, some studies\cite{esimcse,bge} have demonstrated that larger batch sizes enhance the effectiveness of contrastive learning.
+During the training phase, the impact of batch size on the model's final performance is illustrated in Table~\ref{bs_tab}. As shown in the table, the model performs best when the batch size is set to 16. For the proposed W2CL method, a larger batch size not only increases the sample diversity within each batch during training but also provides more negative samples for contrastive learning. Additionally, some studies\cite{esimcse,bge} have demonstrated that the larger batch size enhances the effectiveness of contrastive learning.
 
 \begin{table}
-	\caption{The model's performance under different batch sizes}\label{bs_tab}
+	\caption{The model's performance under different batch size}\label{bs_tab}
 	\begin{center}
 		\begin{tabular}{lccclc}
 			\bottomrule
-			Model      & ATCC         & CAIL         & CHIP-CTC     & \multicolumn{1}{c}{FTCC} & Avg.                      \\ \hline
+			Model      & ASCC         & CAIL(Wait)         & CHIP-CTC     & \multicolumn{1}{c}{FSCC} & Avg.                      \\ \hline
 			W2CL-BERT   & ~~~94.93~~~        & ~~~66.83~~~        & ~~~84.06~~~        & ~~~86.08~~~                    & ~~~82.98~~~ \\ \hline
-			\multicolumn{1}{c}{bs=4}     & 94.55(\textcolor{red}{-0.38}) & 66.53(\textcolor{red}{-0.30}) & 83.25(\textcolor{red}{-0.81}) & 85.96(\textcolor{red}{-0.12})             & 82.57(\textcolor{red}{-0.41})              \\ \hline
-			\multicolumn{1}{c}{bs=8}     & 94.39(\textcolor{red}{-0.54}) & 66.76(\textcolor{red}{-0.07}) & 83.28(\textcolor{red}{-0.78}) & 85.87(\textcolor{red}{-0.21})             & 82.58(\textcolor{red}{-0.40})              \\ \hline
+			\multicolumn{1}{c}{bs=4}     & 93.89(\textcolor{red}{-1.04}) & 66.29(\textcolor{red}{-0.54}) & 83.15(\textcolor{red}{-0.91}) & 85.31(\textcolor{red}{-0.77})             & 82.16(\textcolor{red}{-0.82})              \\ \hline
+			\multicolumn{1}{c}{bs=8}     & 94.42(\textcolor{red}{-0.51}) & 66.45(\textcolor{red}{-0.38}) & 83.42(\textcolor{red}{-0.64}) & 85.83(\textcolor{red}{-0.25})             & 82.53(\textcolor{red}{-0.45})              \\ \hline
 			W2CL-RoBERTa & ~~~94.84~~~        & ~~~67.71~~~        & ~~~83.98~~~        & ~~~86.53~~~                    & ~~~83.27~~~ \\ \hline
-			\multicolumn{1}{c}{bs=4}     & 94.7(\textcolor{red}{-0.14})  & 67.33(\textcolor{red}{-0.38}) & 83.35(\textcolor{red}{-0.63}) & 86.38(\textcolor{red}{-0.15})             & 82.94(\textcolor{red}{-0.33})              \\ \hline
-			\multicolumn{1}{c}{bs=8}     & 94.55(\textcolor{red}{-0.29}) & 67.56(\textcolor{red}{-0.15}) & 83.48(\textcolor{red}{-0.50}) & 86.39(\textcolor{red}{-0.14})             & 83.00(\textcolor{red}{-0.27})              \\ \bottomrule
+			\multicolumn{1}{c}{bs=4}     & 94.10(\textcolor{red}{-0.74})  & 67.01(\textcolor{red}{-0.70}) & 83.35(\textcolor{red}{-0.63}) & 85.60(\textcolor{red}{-0.93})             & 82.52(\textcolor{red}{-0.75})              \\ \hline
+			\multicolumn{1}{c}{bs=8}     & 94.55(\textcolor{red}{-0.29}) & 67.26(\textcolor{red}{-0.45}) & 83.56(\textcolor{red}{-0.42}) & 86.13(\textcolor{red}{-0.40})             & 82.88(\textcolor{red}{-0.39})              \\ \bottomrule
 		\end{tabular}
 	\end{center}
 \end{table}

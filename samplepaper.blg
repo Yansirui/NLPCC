@@ -4,45 +4,45 @@ The top-level auxiliary file: samplepaper.aux
 The style file: splncs04.bst
 Database file #1: refs.bib
 Warning--empty journal in gpt
-You've used 26 entries,
+You've used 29 entries,
             2850 wiz_defined-function locations,
-            727 strings with 11054 characters,
-and the built_in function-call counts, 17773 in all, are:
-= -- 1391
-> -- 857
+            739 strings with 11811 characters,
+and the built_in function-call counts, 19869 in all, are:
+= -- 1523
+> -- 1013
 < -- 18
-+ -- 348
-- -- 322
-* -- 1191
-:= -- 2366
-add.period$ -- 39
-call.type$ -- 26
-change.case$ -- 259
++ -- 411
+- -- 382
+* -- 1350
+:= -- 2674
+add.period$ -- 42
+call.type$ -- 29
+change.case$ -- 296
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 1460
-empty$ -- 1388
-format.name$ -- 348
-if$ -- 3755
+cite$ -- 30
+duplicate$ -- 1625
+empty$ -- 1523
+format.name$ -- 411
+if$ -- 4160
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 335
-newline$ -- 84
-num.names$ -- 52
-pop$ -- 691
+int.to.str$ -- 29
+missing$ -- 383
+newline$ -- 93
+num.names$ -- 58
+pop$ -- 789
 preamble$ -- 1
-purify$ -- 211
+purify$ -- 245
 quote$ -- 0
-skip$ -- 417
+skip$ -- 443
 stack$ -- 0
-substring$ -- 833
-swap$ -- 804
+substring$ -- 872
+swap$ -- 894
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
+type$ -- 116
 warning$ -- 1
-while$ -- 116
-width$ -- 28
-write$ -- 257
+while$ -- 125
+width$ -- 31
+write$ -- 284
 (There was 1 warning)

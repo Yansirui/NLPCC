@@ -3,6 +3,11 @@
 \providecommand{\urlprefix}{URL }
 \providecommand{\doi}[1]{https://doi.org/#1}
 
+\bibitem{sscl}
+Chen, N., Shou, L., Gong, M., Pei, J., Cao, B., Chang, J., Jiang, D., Li, J.:
+  Alleviating over-smoothing for unsupervised sentence representation. arXiv
+  preprint arXiv:2305.06154  (2023)
+
 \bibitem{macbert}
 Cui, Y., Che, W., Liu, T., Qin, B., Yang, Z.: Pre-training with whole word
   masking for chinese bert. IEEE/ACM Transactions on Audio, Speech, and
@@ -133,6 +138,11 @@ Wu, X., Gao, C., Zang, L., Han, J., Wang, Z., Hu, S.: Esimcse: Enhanced sample
   Linguistics, {COLING} 2022, Gyeongju, Republic of Korea, October 12-17, 2022.
   pp. 3898--3907 (2022)
 
+\bibitem{cail}
+Xiao, C., Zhong, H., Guo, Z., Tu, C., Liu, Z., Sun, M., Feng, Y., Han, X., Hu,
+  Z., Wang, H., et~al.: Cail2018: A large-scale legal dataset for judgment
+  prediction. arXiv preprint arXiv:1807.02478  (2018)
+
 \bibitem{bge}
 Xiao, S., Liu, Z., Zhang, P., Muennighof, N.: C-pack: Packaged resources to
   advance general chinese embedding. CoRR  (2023)
@@ -143,6 +153,11 @@ Xu, Y., Zhu, C., Wang, S., Sun, S., Cheng, H., Liu, X., Gao, J., He, P., Zeng,
   external attention. In: Proceedings of the Thirty-First International Joint
   Conference on Artificial Intelligence, {IJCAI} 2022, Vienna, Austria, 23-29
   July 2022. pp. 2762--2768 (2022)
+
+\bibitem{chip}
+Zhang, N., Chen, M., Bi, Z., Liang, X., Li, L., Shang, X., Yin, K., Tan, C.,
+  Xu, J., Huang, F., et~al.: Cblue: A chinese biomedical language understanding
+  evaluation benchmark. arXiv preprint arXiv:2106.08087  (2021)
 
 \bibitem{lm3}
 Zhu, X., Sobihani, P., Guo, H.: Long short-term memory over recursive
